@@ -1,7 +1,7 @@
 :root {
-  --fonttit: 20px;
-  --fontmid: 15px;
-  --fontsm: 10px;
+  --fonttit: 25px;
+  --fontmid: 20px;
+  --fontsm: 15px;
   --text-color: #f0f4f5;
   --img-color: #f3f30cd2;
 }
@@ -37,7 +37,7 @@ a {
   list-style: none;
 }
 .menu li {
-  padding: 8px 12px;
+  padding: 8px 24px;
 }
 .menu :hover {
   background: rgba(54, 54, 54, 0.164);
