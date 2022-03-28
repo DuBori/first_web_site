@@ -4,30 +4,39 @@
   --fontsm: 15px;
   --text-color: #f0f4f5;
   --img-color: #f3f30cd2;
+
+  --white-gray: rgba(54, 54, 54, 0.164);
+}
+* {
+  margin: 0;
 }
 body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  font-family: "Indie Flower", cursive;
+  font-family: "Source Sans Pro";
 }
 a {
   text-decoration: none;
   color: var(--text-color);
+}
+li {
+  padding: 8px 12px;
+  list-style: none;
 }
 
 .title {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: row nowrap;
   background: gray;
-  margin: 0;
-  padding: 8px 12px;
 }
 
 .main__logo {
   font-size: var(--fonttit);
   color: var(--img-color);
+  padding-left: 8px;
 }
 
 .menu {
@@ -50,15 +59,22 @@ a {
 .sns__img li {
   color: var(--img-color);
   font-size: var(--fontmid);
-  padding: 8px 12px;
 }
 
 .main_img {
   display: flex;
   justify-content: center;
-  background: rgba(54, 54, 54, 0.164);
+  background: var(--white-gray);
   width: 100vw;
   height: 70vh;
+  margin-top: 1px;
+}
+
+.sub_img {
+  display: flex;
+  width: 100vw;
+  height: 30vh;
+  margin-bottom: 2px;
 }
 
 .list_img {
@@ -66,19 +82,54 @@ a {
   flex-flow: column;
   justify-content: flex-start;
   list-style: none;
-
   width: 100vw;
   height: 20vh;
+  margin: 8px 12px;
+}
+.ectxt {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 
 .hbr__toogle {
   position: absolute;
-  top: 12px;
-  right: 32px;
+  right: 24px;
+  top: 6px;
   font-size: var(--fontmid);
   justify-content: center;
   color: var(--img-color);
   display: none;
+}
+
+.list_img {
+  display: flex;
+  flex-direction: column;
+}
+.info_fr {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  font-size: var(--fonttit);
+}
+
+.list_img li {
+  display: flex;
+  flex-direction: row;
+}
+.list_img span {
+  padding-left: 4px;
+}
+.main_txt {
+  display: grid;
+  padding: 8px 12px;
+  grid-template-columns: 200px 1fr;
+}
+
+.txt_main {
+  border-right: 1px solid black;
 }
 
 @media screen and (max-width: 768px) {
@@ -109,5 +160,18 @@ a {
   .menu.active,
   .sns__img.active {
     display: flex;
+  }
+
+  .main_txt {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .main_txt div {
+    margin: 4px;
+  }
+  .txt_main {
+    border-right: none;
+    border-bottom: 1px solid black;
   }
 }
